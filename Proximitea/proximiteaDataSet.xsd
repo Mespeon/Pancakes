@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="proximiteaDataSet" targetNamespace="http://tempuri.org/proximiteaDataSet.xsd" xmlns:mstns="http://tempuri.org/proximiteaDataSet.xsd" xmlns="http://tempuri.org/proximiteaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="proximiteaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="proximiteaConnectionString (MySettings)" PropertyReference="ApplicationSettings.Proximitea.My.MySettings.GlobalReference.Default.proximiteaConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ordersDTTableAdapter" GeneratorDataComponentClassName="ordersDTTableAdapter" Name="ordersDT" UserDataComponentName="ordersDTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="proximiteaConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `orders`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="orderID" DataSetColumn="orderID" />
+              <Mapping SourceColumn="productName" DataSetColumn="productName" />
+              <Mapping SourceColumn="quantity" DataSetColumn="quantity" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ordersDT2TableAdapter" GeneratorDataComponentClassName="ordersDT2TableAdapter" Name="ordersDT2" UserDataComponentName="ordersDT2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="proximiteaConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM orders</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="orderID" DataSetColumn="orderID" />
+              <Mapping SourceColumn="productName" DataSetColumn="productName" />
+              <Mapping SourceColumn="quantity" DataSetColumn="quantity" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="proximiteaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="proximiteaDataSet" msprop:Generator_UserDSName="proximiteaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ordersDT" msprop:Generator_TableClassName="ordersDTDataTable" msprop:Generator_TableVarName="tableordersDT" msprop:Generator_RowChangedName="ordersDTRowChanged" msprop:Generator_TablePropName="ordersDT" msprop:Generator_RowDeletingName="ordersDTRowDeleting" msprop:Generator_RowChangingName="ordersDTRowChanging" msprop:Generator_RowEvHandlerName="ordersDTRowChangeEventHandler" msprop:Generator_RowDeletedName="ordersDTRowDeleted" msprop:Generator_RowClassName="ordersDTRow" msprop:Generator_UserTableName="ordersDT" msprop:Generator_RowEvArgName="ordersDTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="orderID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnorderID" msprop:Generator_ColumnPropNameInRow="orderID" msprop:Generator_ColumnPropNameInTable="orderIDColumn" msprop:Generator_UserColumnName="orderID" type="xs:int" minOccurs="0" />
+              <xs:element name="productName" msprop:Generator_ColumnVarNameInTable="columnproductName" msprop:Generator_ColumnPropNameInRow="productName" msprop:Generator_ColumnPropNameInTable="productNameColumn" msprop:Generator_UserColumnName="productName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32767" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:int" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ordersDT2" msprop:Generator_TableClassName="ordersDT2DataTable" msprop:Generator_TableVarName="tableordersDT2" msprop:Generator_TablePropName="ordersDT2" msprop:Generator_RowDeletingName="ordersDT2RowDeleting" msprop:Generator_RowChangingName="ordersDT2RowChanging" msprop:Generator_RowEvHandlerName="ordersDT2RowChangeEventHandler" msprop:Generator_RowDeletedName="ordersDT2RowDeleted" msprop:Generator_UserTableName="ordersDT2" msprop:Generator_RowChangedName="ordersDT2RowChanged" msprop:Generator_RowEvArgName="ordersDT2RowChangeEvent" msprop:Generator_RowClassName="ordersDT2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="orderID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnorderID" msprop:Generator_ColumnPropNameInRow="orderID" msprop:Generator_ColumnPropNameInTable="orderIDColumn" msprop:Generator_UserColumnName="orderID" type="xs:int" minOccurs="0" />
+              <xs:element name="productName" msprop:Generator_ColumnVarNameInTable="columnproductName" msprop:Generator_ColumnPropNameInRow="productName" msprop:Generator_ColumnPropNameInTable="productNameColumn" msprop:Generator_UserColumnName="productName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32767" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:int" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:ordersDT" />
+      <xs:field xpath="mstns:orderID" />
+    </xs:unique>
+    <xs:unique name="ordersDT2_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:ordersDT2" />
+      <xs:field xpath="mstns:orderID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
